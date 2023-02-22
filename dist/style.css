@@ -1,0 +1,39 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+header{
+  background-color: red;
+  text-align:center;
+}
+.container{
+  display: flex;
+  width: 70%;
+  margin-left: auto;
+  margin-right:auto;
+}
+.card{
+  margin: 20px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  width: 30%;
+  text-align:center;
+  justify-content:center;
+}
+.card-head{
+  border-bottom: 1px solid;
+  padding: 15px;
+  height: 70px;
+}
+.card-body{
+  background-color: grey;
+  height:200px
+}
+ul{
+  background-color: grey;
+}
+li{
+  list-style-type: none;
+  padding: 10px 20px;
+}
