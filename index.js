@@ -39,7 +39,7 @@ function appMenu() {
         name: "managerId",
         message: "What is the manager's id number?",
         validate: (result) =>{
-          const pass = result.match(/[^0-9]\D/);
+          const pass = result.match(/^([1-9]\d*|0)$/);
           if (pass){
             return true;
           } else {
@@ -65,7 +65,7 @@ function appMenu() {
         name: "managerOfficeNum",
         message: "What is the manager's office number?",
         validate: (result) =>{
-          const pass = result.match(/[^0-9]\D/)
+          const pass = result.match(/^([1-9]\d*|0)$/);
           if (pass){
             return true;
           } else {
@@ -105,9 +105,11 @@ function appMenu() {
     // options for next role to create
     .then((userChoice) => {
       switch (userChoice.memberRole){
-        case "Engineer": addEngineer();
+        case "Engineer":
+           addEngineer();
           break;
-        case "Intern": addIntern();
+        case "Intern":
+           addIntern();
           break;
           default: buildTeam();
       }
@@ -133,8 +135,8 @@ function appMenu() {
         name: "engineerId",
         message: "What is the engineer's id number?",
         validate: (result) =>{
-          const pass = result.match(/[^0-9]\D/);
-          if (pass){
+          const pass = result.match(/^([1-9]\d*|0)$/);
+          if (!pass){
             return true;
           } else {
             return "Please enter a valid Id number";
@@ -201,7 +203,7 @@ function appMenu() {
         name: "internId",
         message: "What is the intern's id number?",
         validate: (result) =>{
-          const pass = result.match(/[^0-9]\D/);
+          const pass = result.match(/^([1-9]\d*|0)$/);
           if (pass){
             return true;
           } else {
