@@ -6,25 +6,36 @@
 header{
   background-color: red;
   text-align:center;
+  height: 10vh;
+  font-size: 1 rem;
+}
+main{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .container{
-  display: flex;
-  width: 70%;
-  margin-left: auto;
-  margin-right:auto;
+  display: grid;
+  width: 80%;
+  grid-template-columns: repeat(3, 1fr);
+  
 }
 .card{
-  margin: 20px;
+  
   border: 1px solid #000000;
   border-radius: 5px;
-  width: 30%;
+  align-items: center;
   text-align:center;
   justify-content:center;
+  margin: 25px auto;
+  width: 80%;
 }
 .card-head{
   border-bottom: 1px solid;
   padding: 15px;
-  height: 70px;
+  height: 90px;
 }
 .card-body{
   background-color: grey;
