@@ -1,6 +1,6 @@
 const fs = require("fs")
-const Engineer =require("./lib/Engineer");
 const Manager = require("./lib/Manager");
+const Engineer =require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
 const inquirer = require("inquirer");
@@ -137,9 +137,9 @@ function appMenu() {
         validate: (result) =>{
           const pass = result.match(/^([1-9]\d*|0)$/);
           if (!pass){
-            return true;
-          } else {
             return "Please enter a valid Id number";
+          } else {
+            return true;
           }
         },
       },
@@ -213,14 +213,13 @@ function appMenu() {
       },
       {
         type:"input",
-        name: "internEmail",
-        message: "What is the intern's email address?",
+        name: "internSchool",
+        message: "What school is the intern enrolled in?",
         validate: (result) =>{
-          const pass = result.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
-          if (pass){
+          if (result !== " "){
             return true;
           } else {
-            return "Please enter a valid email address";
+            return "Please enter intern's School";
           }
         },
       },
@@ -241,7 +240,7 @@ function appMenu() {
       const intern = new Intern(
         result.internName,
         result.internId,
-        result.internEmail,
+        result.internSchool,
         result.internGithub
         );
         teamMembers.push(intern);
@@ -255,7 +254,7 @@ function appMenu() {
     if(!fs.existsSync(distDir)){
       fs.mkdirSync(distDir);
     }
-    fs.writeFileSync(distPath,fillTemplate(teamMembers),"utf-8");
+    fs.writeFileSync(distPath, fillTemplate(teamMembers), "utf-8");
   }
 
   createManager();
