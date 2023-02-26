@@ -27,9 +27,8 @@ If the application directory does not contain a node module or package-lock.json
 
 ## Usage
 After installing all needed packages, then type node index.js to start the application. Answer the following prompts to generate a Manager/Team leader profile. Next you will be asked whether you would like to create a intern or engineer profile. Once team is build please select No more Team Members to finish creating your HTML file. CSS can be found under the gen folder to customize HTML to user's liking. Video Guide Provided for reference.
-<iframe src="https://drive.google.com/file/d/1kwuTCm2rw1e90LEqHggwdEIxhg_cDDso/preview" width="640" height="480"></iframe>
 
-Drive Link to view Video if it does not play: [https://drive.google.com/file/d/1kwuTCm2rw1e90LEqHggwdEIxhg_cDDso/view](https://drive.google.com/file/d/1kwuTCm2rw1e90LEqHggwdEIxhg_cDDso/view)
+Drive Link to view Video: [https://drive.google.com/file/d/1kwuTCm2rw1e90LEqHggwdEIxhg_cDDso/view](https://drive.google.com/file/d/1kwuTCm2rw1e90LEqHggwdEIxhg_cDDso/view)
 
 ## Credits
 Application was started and completed by Teni Keshinro
