@@ -213,6 +213,19 @@ function appMenu() {
       },
       {
         type:"input",
+        name: "internEmail",
+        message: "What is the intern's email address?",
+        validate: (result) =>{
+          const pass = result.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+          if (pass){
+            return true;
+          } else {
+            return "Please enter a valid email address";
+          }
+        },
+      },
+      {
+        type:"input",
         name: "internSchool",
         message: "What school is the intern enrolled in?",
         validate: (result) =>{
@@ -223,25 +236,13 @@ function appMenu() {
           }
         },
       },
-      {
-        type:"input",
-        name: "internGithub",
-        message: "What is the intern's Github username?",
-        validate: (result) =>{
-          if (result === " "){
-            return "Please enter a valid github Username";
-          } else {
-            return true;
-          }
-        },
-      },
     ])
     .then((result) => {
       const intern = new Intern(
         result.internName,
         result.internId,
-        result.internSchool,
-        result.internGithub
+        result.internEmail,
+        result.internSchool
         );
         teamMembers.push(intern);
         idArray.push(result.internId);
