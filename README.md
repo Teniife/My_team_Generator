@@ -22,7 +22,7 @@ Tests
 
 Questions
 
-## Installation
+### Installation
 If the application directory does not contain a node module or package-lock.json file, Users must open a new terminal window, travel to the application main directory and type npm install in the temrinal. The needed packages should be installed after a short while.
 
 ## Usage
