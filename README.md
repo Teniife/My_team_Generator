@@ -4,7 +4,7 @@
 As a developer I want to build a command-line application that takes information about employeees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
 
 ## Table of Contents:
-Installtion
+*Installtion
 
 Usage
 
@@ -22,7 +22,7 @@ Tests
 
 Questions
 
-### Installation
+## Installation
 If the application directory does not contain a node module or package-lock.json file, Users must open a new terminal window, travel to the application main directory and type npm install in the temrinal. The needed packages should be installed after a short while.
 
 ## Usage
